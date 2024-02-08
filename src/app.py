@@ -2,7 +2,7 @@
 from tkinter import Tk as Tk
 from tkinter import Button , Text , Label , LabelFrame , colorchooser
 from dhooks import Webhook , Embed
-from main import send 
+from main import send
 
 # Varables
 discord_color = '#36393e'
@@ -11,8 +11,8 @@ burple = '#7289da'
 # Definition Window and set properties
 window = Tk()
 
-window.title("Webhook Manager (0.1)")
-window.iconbitmap('C:\\Users\\Farzad\\Documents\\WebhookManager\\Code\media\\icon.ico')
+window.title("Webhook Manager (0.2)")
+window.iconbitmap('media\\icon.ico')
 window.geometry('600x550')
 window.resizable(False,False)
 window.configure(bg=discord_color)
@@ -36,7 +36,8 @@ send_button = Button(window , text="SEND",bg='green',fg='white',cursor='hand2',
                           message=message_textbox.get("1.0",'end-1c'),
                           embed=Embed(
                               title=embed_title_textbox.get("1.0",'end-1c'),
-                              description=embed_description_textbox.get("1.0",'end-1c')
+                              description=embed_description_textbox.get("1.0",'end-1c'),
+                              color=0xffffff
                           )))
 
 # - embed

@@ -1,5 +1,5 @@
 # Discord Webhook Manager
-![ver](https://img.shields.io/badge/version-0.1-orange)
+![ver](https://img.shields.io/badge/version-0.2-orange)
 
 ![dhooks](https://img.shields.io/badge/dhooks-1.1.4-green)
 ![tkinter](https://img.shields.io/badge/tkinter-8.6.12-yellow)
