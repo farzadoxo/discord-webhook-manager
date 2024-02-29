@@ -1,8 +1,9 @@
 # Library and madules
 from tkinter import Tk as Tk
-from tkinter import Button , Text , Label , LabelFrame , colorchooser
+from tkinter import Button , Text , Label , LabelFrame , colorchooser , messagebox
 from dhooks import Webhook , Embed
 from main import send
+
 
 # Varables
 discord_color = '#36393e'
@@ -29,6 +30,7 @@ webhook_url_textbox = Text(window,width=62,height=2)
 message_groupbox = LabelFrame(text="Content",width=500,height=195,bg=discord_color,fg='white')
 message_label = Label(window,text="Message :",bg=discord_color,fg='white')
 message_textbox = Text(window,height=10,width=50)
+emoji_help = Button(window , text="Emoji ?", bg='yellow',fg='black',command=lambda:messagebox.showinfo("Information 📌","For use emojies, you should enter ':' before and after emoji name !"))
 message_clear_button = Button(window , text="Clear",bg='red',fg='white',width=6,height=1,command=lambda:message_textbox.delete('1.0', 'end-1c'))
 send_button = Button(window , text="SEND",bg='green',fg='white',cursor='hand2',
                       command=lambda:send(
@@ -60,6 +62,7 @@ message_groupbox.place(x=5,y=92)
 message_label.place(x=15,y=110)
 message_textbox.place(x=80,y=110)
 message_clear_button.place(x=17,y=150)
+emoji_help.place(x=17,y=180)
 # - embed
 embed_groupbox.place(x=5,y=300)
 embed_title_label.place(x=55,y=320)
