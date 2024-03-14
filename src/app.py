@@ -2,7 +2,7 @@
 from tkinter import Tk as Tk
 from tkinter import Button , Text , Label , LabelFrame , colorchooser , messagebox
 from dhooks import Webhook , Embed
-from main import send
+from main import  Content
 
 
 # Varables
@@ -12,7 +12,7 @@ burple = '#7289da'
 # Definition Window and set properties
 window = Tk()
 
-window.title("Webhook Manager (0.2)")
+window.title("Webhook Manager (0.4)")
 window.iconbitmap('media\\icon.ico')
 window.geometry('600x550')
 window.resizable(False,False)
@@ -33,14 +33,10 @@ message_textbox = Text(window,height=10,width=50)
 emoji_help = Button(window , text="Emoji ?", bg='yellow',fg='black',command=lambda:messagebox.showinfo("Information 📌","For use emojies, you should enter ':' before and after emoji name !"))
 message_clear_button = Button(window , text="Clear",bg='red',fg='white',width=6,height=1,command=lambda:message_textbox.delete('1.0', 'end-1c'))
 send_button = Button(window , text="SEND",bg='green',fg='white',cursor='hand2',
-                      command=lambda:send(
-                          webhook=Webhook(url=webhook_url_textbox.get("1.0",'end-1c')),
-                          message=message_textbox.get("1.0",'end-1c'),
-                          embed=Embed(
-                              title=embed_title_textbox.get("1.0",'end-1c'),
-                              description=embed_description_textbox.get("1.0",'end-1c'),
-                              color=0xffffff
-                          )))
+                      command=lambda:Content(webhook_url=webhook_url_textbox.get("1.0",'end-1c'),
+                                            message=message_textbox.get("1.0",'end-1c'),
+                                            embed_title=embed_title_textbox.get("1.0",'end-1c'),
+                                            embed_description=embed_description_textbox.get("1.0",'end-1c')).send())
 
 # - embed
 embed_groupbox = LabelFrame(text="Embed",width=500,height=195,bg=discord_color,fg='white')
