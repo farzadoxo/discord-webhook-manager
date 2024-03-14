@@ -29,7 +29,8 @@ By creating a webhook endpoint in your server, you'll generate a Webhook URL tha
 - send embed message
 - Emoji support *(emoji code)* 😁
 
-
+#Screen Shots :
+<img src="https://github.com/farzadoxo/discord-webhook-manager/blob/master/readme%2Fscreenshot%2Fscreenshot1.PNG" width=200px>
 # What news ? 📰
 + If this repository is supported, new features such as sending message embeds along with regular messages as an option, the ability to send multiple embeds, the ability to adjust the embed color, etc. will be added.
 + .exe file executable on Windows soon...
