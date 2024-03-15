@@ -29,7 +29,8 @@ class Content:
         self.message = message
         self.embed_title = embed_title
         self.embed_descreption = embed_description
-        self.embed = Embed(title=embed_title,description=embed_description)
+        self.embed_color = 0xffffff
+        self.embed = Embed(title=embed_title,description=embed_description,color=self.embed_color)
 
 
     def __str__(self):
