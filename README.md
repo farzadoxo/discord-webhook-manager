@@ -24,6 +24,8 @@ By creating a webhook endpoint in your server, you'll generate a Webhook URL tha
 3. tkinter package installed default on your python 🐍
 4. Run `app.py` file on `src` folder
 
+Or use [Release](https://github.com/farzadoxo/discord-webhook-manager/releases/tag/v0.4)
+
 # Featurs :
 - Send normal message
 - send embed message
